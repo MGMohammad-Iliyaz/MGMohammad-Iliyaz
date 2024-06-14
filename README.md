@@ -1,5 +1,5 @@
 <h1 align="center">Hi 👋, I'm MG.Mohammad Iliyaz</h1>
-<h3 align="center">I’m currently Pursuing Graduation in Electronicsand Communication Engineering at Annamacharya Institute of Technology and Sciences</h3>
+<h3 align="center">I’m currently Pursuing Graduation in Electronics and Communication Engineering at Annamacharya Institute of Technology and Sciences</h3>
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=mgmohammad-iliyaz&label=Profile%20views&color=0e75b6&style=flat" alt="mgmohammad-iliyaz" /> </p>
 
