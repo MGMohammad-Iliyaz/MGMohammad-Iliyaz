@@ -6,7 +6,9 @@
 
 - 👨‍💻 All of my projects are available at [https://github.com/MGMohammad-Iliyaz/MGMohammad-Iliyaz.git](https://github.com/MGMohammad-Iliyaz/MGMohammad-Iliyaz.git)
 
-- 📫 How to reach me **mgiliyas8078@gmail.com**
+- 📫 How to reach me
+- EMAIL:**mgiliyas8078@gmail.com**
+
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
@@ -22,3 +24,4 @@
 <p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=mgmohammad-iliyaz&show_icons=true&locale=en" alt="mgmohammad-iliyaz" /></p>
 
 <p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=mgmohammad-iliyaz&" alt="mgmohammad-iliyaz" /></p>
+
