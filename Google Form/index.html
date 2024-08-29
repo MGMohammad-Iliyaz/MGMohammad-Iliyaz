@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Information Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Student Information Form</h2>
+        <form id="studentForm">
+            <label for="email">Student Email ID:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="college">College:</label>
+            <input type="text" id="college" name="college" required>
+
+            <label for="branch">Branch:</label>
+            <select id="branch" name="branch" required>
+                <option value="CSE">CSE</option>
+                <option value="ECE">ECE</option>
+                <option value="EEE">EEE</option>
+                <option value="MECH">MECH</option>
+                <option value="CIVIL">CIVIL</option>
+            </select>
+
+            <label for="rollNumber">Roll Number:</label>
+            <input type="text" id="rollNumber" name="rollNumber" required>
+
+            <label for="city">City:</label>
+            <select id="city" name="city" required>
+                <option value="Annamayya">Annamayya</option>
+                <option value="Kadapa">Kadapa</option>
+                <option value="Kurnool">Kurnool</option>
+                <option value="Nandyal">Nandyal</option>
+                <option value="Anantapur">Anantapur</option>
+            </select>
+
+            <label for="review">Review of Your College:</label>
+            <textarea id="review" name="review" rows="5" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
