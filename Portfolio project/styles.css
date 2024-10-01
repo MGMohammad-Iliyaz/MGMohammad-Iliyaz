@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f9f9f9;
+    color: #444;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #2a3c58; /* Dark Blue */
+    padding: 1rem;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #f7ca18; /* Golden Yellow */
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 2rem;
+}
+
+header nav ul li a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    background-color: #f7ca18; /* Golden Yellow */
+    color: #2a3c58; /* Dark Blue */
+    border-radius: 5px;
+}
+
+/* Hero Section */
+#hero {
+    background: linear-gradient(rgba(42, 60, 88, 0.8), rgba(42, 60, 88, 0.8)), url('hero-image.jpg') no-repeat center center/cover;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    padding: 1rem;
+}
+
+#hero h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    color: #f7ca18; /* Golden Yellow */
+}
+
+#hero p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+#hero .btn {
+    padding: 0.8rem 2rem;
+    background-color: #3498db; /* Light Blue */
+    color: #fff;
+    border: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+#hero .btn:hover {
+    background-color: #2980b9; /* Darker Blue */
+}
+
+/* Section Styles */
+.section-bg-light {
+    background-color: #f2f3f7;
+    padding: 3rem 2rem;
+}
+
+.section-bg-dark {
+    background-color: #34495e; /* Dark Slate Blue */
+    color: #ecf0f1;
+    padding: 5rem 2rem;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #f7ca18; /* Golden Yellow */
+}
+
+/* Grid Layouts */
+.projects-grid, .skills-grid, .certifications-grid, .education-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.project-item, .skill-item, .certification-item, .education-item {
+    background-color: #2c3e50; /* Dark Blue */
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.project-item:hover, .skill-item:hover, .certification-item:hover, .education-item:hover {
+    transform: translateY(-10px);
+    background-color: #3498db; /* Light Blue */
+}
+
+/* Buttons */
+.btn-light {
+    padding: 0.5rem 2rem;
+    background-color: #f7ca18; /* Golden Yellow */
+    color: #2a3c58; /* Dark Blue */
+    border: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-light:hover {
+    background-color: #f39c12; /* Darker Yellow */
+    color: #fff;
+}
+
+/* Contact Section */
+#contact p {
+    text-align: center;
+    font-size: 1.3rem;
+    color: #f7ca18; /* Golden Yellow */
+}
+
+footer {
+    background-color: #2a3c58; /* Dark Blue */
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    font-size: 1rem;
+}
