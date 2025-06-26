@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Management System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+<body>
+    <h2>Employee List</h2>
+    <table>
+        <tr>
+            <th>ID</th><th>Name</th><th>Email</th><th>Phone</th><th>Action</th>
+        </tr>
+        {% for emp in employees %}
+        <tr>
+            <td>{{ emp[0] }}</td><td>{{ emp[1] }}</td><td>{{ emp[2] }}</td><td>{{ emp[3] }}</td>
+            <td><a href="{{ url_for('delete_employee', id=emp[0]) }}" onclick="return confirmDelete('{{ emp[1] }}')">Delete</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+    <h2>Add Employee</h2>
+    <form action="/add" method="post">
+        <input type="text" name="name" placeholder="Name" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="text" name="phone" placeholder="Phone" required>
+        <input type="submit" value="Add">
+    </form>
+</body>
+</html>
