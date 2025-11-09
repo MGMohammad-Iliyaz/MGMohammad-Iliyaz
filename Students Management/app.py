@@ -4,12 +4,14 @@ import mysql.connector
 app = Flask(__name__)
 
 # Database connection
-conn = mysql.connector.connect(
-    host="localhost",
-    user="root",
+connection = mysql.connector.connect(
+    host="mydb-xxxxx.render.com",
+    user="render",
     password="Iliyas@486",
-    database="studentdb"
+    database="studentdb",
+    port=3306
 )
+
 cursor = conn.cursor(dictionary=True)
 
 # Home page - view all students
