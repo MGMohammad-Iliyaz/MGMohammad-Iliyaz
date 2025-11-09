@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Management System</title>
+    <style>
+        body { font-family: Arial; margin: 40px; }
+        table { border-collapse: collapse; width: 70%; margin-top: 20px; }
+        th, td { border: 1px solid #ccc; padding: 10px; text-align: left; }
+        th { background-color: #007bff; color: white; }
+        a { text-decoration: none; color: red; }
+        .add-btn { background-color: #28a745; color: white; padding: 8px 15px; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <h2>🎓 Student Management System</h2>
+    <a href="/add" class="add-btn">+ Add New Student</a>
+    <table>
+        <tr><th>ID</th><th>Name</th><th>Age</th><th>Roll_NO</th><th>Branch</th><th>Action</th></tr>
+        {% for s in students %}
+        <tr>
+            <td>{{ s.id }}</td>
+            <td>{{ s.name }}</td>
+            <td>{{ s.age }}</td>
+            <td>{{ s.roll_no }}</td>
+            <td>{{ s.branch }}</td>
+            <td><a href="/delete/{{ s.id }}">Delete</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
