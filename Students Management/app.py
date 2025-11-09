@@ -4,16 +4,15 @@ import os
 
 app = Flask(__name__)
 
-# Database connection (replace <password> with your actual password)
-connection = mysql.connector.connect(
-    host="mydb-xyz123.render.com",
-    user="render",
-    password="Iliyas@486",  # replace <password> with your actual password
-    database="studentdb",
-    port=3306
+# Database connection
+conn = mysql.connector.connect(
+    host="localhost",
+    user="root",
+    password="Iliyas@486",
+    database="studentdb"
 )
+cursor = conn.cursor(dictionary=True)
 
-cursor = connection.cursor(dictionary=True)
 
 # Home page - view all students
 @app.route('/')
