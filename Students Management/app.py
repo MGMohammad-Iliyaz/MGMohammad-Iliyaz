@@ -4,13 +4,13 @@ import os
 
 app = Flask(__name__)
 
-# Database connection using environment variables
+# Database connection (replace <password> with your actual password)
 connection = mysql.connector.connect(
-    host=os.getenv("DB_HOST", "mydb-abcd1234.render.com"),  # replace default with your actual host
-    user=os.getenv("DB_USER", "render"),
-    password=os.getenv("DB_PASS", "Iliyas@486"),
-    database=os.getenv("DB_NAME", "studentdb"),
-    port=int(os.getenv("DB_PORT", 3306))
+    host="mydb-xyz123.render.com",
+    user="render",
+    password="Iliyas@486",  # replace <password> with your actual password
+    database="studentdb",
+    port=3306
 )
 
 cursor = connection.cursor(dictionary=True)
