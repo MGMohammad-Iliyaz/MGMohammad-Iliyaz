@@ -10,6 +10,17 @@ from webdriver_manager.chrome import ChromeDriverManager
 from concurrent.futures import ThreadPoolExecutor
 from bs4 import BeautifulSoup
 
+import chromedriver_autoinstaller
+
+# Automatically install the right ChromeDriver version
+chromedriver_autoinstaller.install()
+
+chrome_options = webdriver.ChromeOptions()
+chrome_options.add_argument("--headless")
+chrome_options.add_argument("--no-sandbox")
+chrome_options.add_argument("--disable-dev-shm-usage")
+
+driver = webdriver.Chrome(options=chrome_options)
 def setup_driver():
     chrome_options = Options()
     chrome_options.add_argument("--headless")
