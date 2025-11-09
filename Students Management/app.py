@@ -1,18 +1,19 @@
 from flask import Flask, render_template, request, redirect
 import mysql.connector
+import os
 
 app = Flask(__name__)
 
-# Database connection
+# Database connection using environment variables
 connection = mysql.connector.connect(
-    host="mydb-xxxxx.render.com",
-    user="render",
-    password="Iliyas@486",
-    database="studentdb",
-    port=3306
+    host=os.getenv("DB_HOST", "mydb-abcd1234.render.com"),  # replace default with your actual host
+    user=os.getenv("DB_USER", "render"),
+    password=os.getenv("DB_PASS", "Iliyas@486"),
+    database=os.getenv("DB_NAME", "studentdb"),
+    port=int(os.getenv("DB_PORT", 3306))
 )
 
-cursor = conn.cursor(dictionary=True)
+cursor = connection.cursor(dictionary=True)
 
 # Home page - view all students
 @app.route('/')
@@ -33,7 +34,7 @@ def add_student():
         sql = "INSERT INTO students (name, age, roll_no, branch) VALUES (%s, %s, %s, %s)"
         data = (name, age, roll_no, branch)
         cursor.execute(sql, data)
-        conn.commit()
+        connection.commit()
         return redirect('/')
     return render_template('add_student.html')
 
@@ -41,8 +42,9 @@ def add_student():
 @app.route('/delete/<int:id>')
 def delete_student(id):
     cursor.execute("DELETE FROM students WHERE id = %s", (id,))
-    conn.commit()
+    connection.commit()
     return redirect('/')
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    # For deployment on Render, bind to 0.0.0.0
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)), debug=True)
