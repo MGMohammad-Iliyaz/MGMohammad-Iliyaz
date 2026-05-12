@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Students</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<h2>Student List</h2>
+
+<a href="/add">Add Student</a> |
+<a href="/logout">Logout</a>
+
+<br><br>
+
+<form method="GET">
+    <input type="text" name="search" placeholder="Search">
+    <button type="submit">Search</button>
+</form>
+
+<br>
+
+<table border="1">
+<tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Roll No</th>
+    <th>Branch</th>
+    <th>Actions</th>
+</tr>
+
+{% for s in students %}
+<tr>
+    <td>{{ s.id }}</td>
+    <td>{{ s.name }}</td>
+    <td>{{ s.age }}</td>
+    <td>{{ s.roll_no }}</td>
+    <td>{{ s.branch }}</td>
+    <td>
+        <a href="/update/{{ s.id }}">Edit</a> |
+        <a href="/delete/{{ s.id }}">Delete</a>
+    </td>
+</tr>
+{% endfor %}
+
+</table>
+
+</body>
+</html>
